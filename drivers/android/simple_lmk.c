@@ -300,6 +300,20 @@ void simple_lmk_mm_freed(struct mm_struct *mm)
 	}
 }
 
+static int simple_lmk_vmpressure_cb(struct notifier_block *nb,
+				    unsigned long pressure, void *data)
+{
+	if (pressure >= 85 && !atomic_cmpxchg_acquire(&needs_reclaim, 0, 1))
+		wake_up(&oom_waitq);
+
+	return NOTIFY_OK;
+}
+
+static struct notifier_block vmpressure_notif = {
+	.notifier_call = simple_lmk_vmpressure_cb,
+	.priority = INT_MAX
+};
+
 /* Initialize Simple LMK when lmkd in Android writes to the minfree parameter */
 static int simple_lmk_init_set(const char *val, const struct kernel_param *kp)
 {
