@@ -131,3 +131,6 @@ Android.bp
 
 # Huaqin, stop being retard by doing all kernel stuffs on Windows
 !.gitattributes
+
+# ignore kernelSU
+KernelSU/
