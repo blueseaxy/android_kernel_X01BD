@@ -55,7 +55,6 @@
 			sched-energy-costs = <&CPU_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea0>;
-			efficiency = <636>;
 			capacity-dmips-mhz = <636>;
 			next-level-cache = <&L2_0>;
                         dynamic-power-coefficient = <195>;
@@ -87,7 +86,6 @@
 			sched-energy-costs = <&CPU_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea1>;
-			efficiency = <636>;
 			capacity-dmips-mhz = <636>;
 			next-level-cache = <&L2_0>;
                         dynamic-power-coefficient = <195>;
@@ -113,7 +111,6 @@
 			sched-energy-costs = <&CPU_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea2>;
-			efficiency = <636>;
 			capacity-dmips-mhz = <636>;
 			next-level-cache = <&L2_0>;
                         dynamic-power-coefficient = <195>;
@@ -139,7 +136,6 @@
 			sched-energy-costs = <&CPU_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea3>;
-			efficiency = <636>;
 			capacity-dmips-mhz = <636>;
 			next-level-cache = <&L2_0>;
                         dynamic-power-coefficient = <195>;
@@ -165,7 +161,6 @@
 			sched-energy-costs = <&CPU_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			qcom,ea = <&ea4>;
-			efficiency = <1024>;
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_1>;
                         dynamic-power-coefficient = <195>;
@@ -195,7 +190,6 @@
 			sched-energy-costs = <&CPU_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			qcom,ea = <&ea5>;
-			efficiency = <1024>;
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_1>;
                         dynamic-power-coefficient = <195>;
@@ -221,7 +215,6 @@
 			sched-energy-costs = <&CPU_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			qcom,ea = <&ea6>;
-			efficiency = <1024>;
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_1>;
                         dynamic-power-coefficient = <195>;
@@ -247,7 +240,6 @@
 			sched-energy-costs = <&CPU_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			qcom,ea = <&ea7>;
-			efficiency = <1024>;
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_1>;
                         dynamic-power-coefficient = <195>;
