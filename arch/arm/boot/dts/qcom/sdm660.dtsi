@@ -57,7 +57,7 @@
 			qcom,ea = <&ea0>;
 			capacity-dmips-mhz = <636>;
 			next-level-cache = <&L2_0>;
-                        dynamic-power-coefficient = <195>;
+                        dynamic-power-coefficient = <122>;
 			L2_0: l2-cache {
 				compatible = "arm,arch-cache";
 				cache-level = <2>;
@@ -88,7 +88,7 @@
 			qcom,ea = <&ea1>;
 			capacity-dmips-mhz = <636>;
 			next-level-cache = <&L2_0>;
-                        dynamic-power-coefficient = <195>;
+                        dynamic-power-coefficient = <122>;
 			L1_I_1: l1-icache {
 				compatible = "arm,arch-cache";
 				qcom,dump-size = <0x9040>;
@@ -113,7 +113,7 @@
 			qcom,ea = <&ea2>;
 			capacity-dmips-mhz = <636>;
 			next-level-cache = <&L2_0>;
-                        dynamic-power-coefficient = <195>;
+                        dynamic-power-coefficient = <122>;
 			L1_I_2: l1-icache {
 				compatible = "arm,arch-cache";
 				qcom,dump-size = <0x9040>;
@@ -138,7 +138,7 @@
 			qcom,ea = <&ea3>;
 			capacity-dmips-mhz = <636>;
 			next-level-cache = <&L2_0>;
-                        dynamic-power-coefficient = <195>;
+                        dynamic-power-coefficient = <122>;
 			L1_I_3: l1-icache {
 				compatible = "arm,arch-cache";
 				qcom,dump-size = <0x9040>;
@@ -163,7 +163,7 @@
 			qcom,ea = <&ea4>;
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_1>;
-                        dynamic-power-coefficient = <195>;
+                        dynamic-power-coefficient = <122>;
 			L2_1: l2-cache {
 				compatible = "arm,arch-cache";
 				cache-level = <2>;
@@ -192,7 +192,7 @@
 			qcom,ea = <&ea5>;
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_1>;
-                        dynamic-power-coefficient = <195>;
+                        dynamic-power-coefficient = <122>;
 			L1_I_101: l1-icache {
 				compatible = "arm,arch-cache";
 				qcom,dump-size = <0x12000>;
@@ -217,7 +217,7 @@
 			qcom,ea = <&ea6>;
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_1>;
-                        dynamic-power-coefficient = <195>;
+                        dynamic-power-coefficient = <122>;
 			L1_I_102: l1-icache {
 				compatible = "arm,arch-cache";
 				qcom,dump-size = <0x12000>;
@@ -242,7 +242,7 @@
 			qcom,ea = <&ea7>;
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_1>;
-                        dynamic-power-coefficient = <195>;
+                        dynamic-power-coefficient = <122>;
 			L1_I_103: l1-icache {
 				compatible = "arm,arch-cache";
 				qcom,dump-size = <0x12000>;
