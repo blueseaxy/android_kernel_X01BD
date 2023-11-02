@@ -23,7 +23,7 @@
 #include <linux/msm-bus.h>
 #include <linux/msm-bus-board.h>
 #include <linux/regulator/consumer.h>
-#include <sync.h>
+#include "sync.h"
 
 #include "mdss_rotator_internal.h"
 #include "mdss_mdp.h"

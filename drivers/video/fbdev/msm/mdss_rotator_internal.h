@@ -20,8 +20,8 @@
 #include <linux/mutex.h>
 #include <linux/types.h>
 #include <linux/cdev.h>
-#include <sync.h>
-#include <sw_sync.h>
+#include "sync.h"
+#include "sw_sync.h"
 
 #include  "mdss_mdp.h"
 

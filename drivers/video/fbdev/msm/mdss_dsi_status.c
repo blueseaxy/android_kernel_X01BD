@@ -232,7 +232,7 @@ static int param_dsi_status_disable(const char *val, struct kernel_param *kp)
 	return ret;
 }
 
-static int param_set_interval(const char *val, struct kernel_param *kp)
+static unsigned int param_set_interval(const char *val, struct kernel_param *kp)
 {
 	int ret = 0;
 	int int_val;

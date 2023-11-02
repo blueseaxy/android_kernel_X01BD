@@ -1,4 +1,5 @@
 ccflags-y += -I$(src) -Idrivers/staging/android
+ccflags-y := -Wno-multichar -Wno-incompatible-pointer-types -Wno-error=int-conversion
 
 obj-$(CONFIG_FB_MSM_MDSS_MHL3) += mhl3/
 obj-$(CONFIG_MSM_DBA) += msm_dba/

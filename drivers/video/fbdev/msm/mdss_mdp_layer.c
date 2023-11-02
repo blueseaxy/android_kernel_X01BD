@@ -22,8 +22,8 @@
 #include <linux/msm_mdp.h>
 #include <linux/memblock.h>
 #include <linux/file.h>
-#include <sync.h>
-#include <sw_sync.h>
+#include "sync.h"
+#include "sw_sync.h"
 
 #include <soc/qcom/event_timer.h>
 #include "mdss.h"

@@ -14,8 +14,8 @@
 #ifndef __MDSS_MDP_WFD_H__
 #define __MDSS_MDP_WFD_H__
 
-#include <sync.h>
-#include <sw_sync.h>
+#include <linux/sync.h>
+#include <linux/sw_sync.h>
 #include <linux/mutex.h>
 #include <linux/types.h>
 #include <linux/msm_mdp_ext.h>

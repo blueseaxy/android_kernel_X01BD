@@ -3,6 +3,7 @@
 #
 
 ccflags-$(CONFIG_ACPI_DEBUG)	+= -DACPI_DEBUG_OUTPUT
+ccflags-y := -Wno-multichar -Wno-incompatible-pointer-types
 
 #
 # ACPI Boot-Time Table Parsing

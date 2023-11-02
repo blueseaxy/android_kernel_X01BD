@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0
 #
 # Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
-
+ccflags-y := -Wno-multichar -Wno-incompatible-pointer-types -Wno-error=int-conversion  
 ccflags-y := -O3
 ccflags-y += -D'pr_fmt(fmt)=KBUILD_MODNAME ": " fmt'
 ccflags-$(CONFIG_WIREGUARD_DEBUG) += -DDEBUG

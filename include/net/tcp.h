@@ -763,7 +763,7 @@ static inline u64 tcp_clock_us(void)
 }
 
 /* This should only be used in contexts where tp->tcp_mstamp is up to date */
-static inline u32 tcp_time_stamp(const struct tcp_sock *tp)
+static unsigned int  tcp_time_stamp(const struct tcp_sock *tp)
 {
 	return div_u64(tp->tcp_mstamp, USEC_PER_SEC / TCP_TS_HZ);
 }

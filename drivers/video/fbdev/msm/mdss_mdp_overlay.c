@@ -26,7 +26,7 @@
 #include <linux/memblock.h>
 #include <linux/sort.h>
 #include <linux/kmemleak.h>
-#include <sw_sync.h>
+#include "sw_sync.h"
 
 #include <soc/qcom/event_timer.h>
 #include <linux/msm-bus.h>
