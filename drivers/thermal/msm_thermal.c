@@ -3832,7 +3832,7 @@ static int hotplug_init_cpu_offlined(void)
 	int temp = 0;
 	uint32_t cpu = 0;
 
-	if (!hotplug_enabled || !hotplug_task)
+	if (!hotplug_enabled)
 		return 0;
 
 	mutex_lock(&core_control_mutex);
