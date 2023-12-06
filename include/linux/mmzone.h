@@ -231,6 +231,7 @@ struct lruvec {
 #ifdef CONFIG_MEMCG
 	struct zone *zone;
 #endif
+       struct pglist_data *pgdat;
 };
 
 /* Mask used at gathering information at once (see memcontrol.c) */
@@ -692,6 +693,9 @@ typedef struct pglist_data {
 	wait_queue_head_t kcompactd_wait;
 	struct task_struct *kcompactd;
 #endif
+       struct lruvec		lruvec;
+       unsigned long		flags;
+
 #ifdef CONFIG_NUMA_BALANCING
 	/* Lock serializing the migrate rate limiting window */
 	spinlock_t numabalancing_migrate_lock;
@@ -772,6 +776,15 @@ extern int init_currently_empty_zone(struct zone *zone, unsigned long start_pfn,
 				     unsigned long size);
 
 extern void lruvec_init(struct lruvec *lruvec);
+
+static inline struct pglist_data *lruvec_pgdat(struct lruvec *lruvec)
+{
+#ifdef CONFIG_MEMCG
+	return lruvec->pgdat;
+#else
+	return container_of(lruvec, struct pglist_data, lruvec);
+#endif
+}
 
 static inline struct zone *lruvec_zone(struct lruvec *lruvec)
 {

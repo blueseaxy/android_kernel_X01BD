@@ -2162,7 +2162,7 @@ static void get_scan_count(struct lruvec *lruvec, int swappiness,
 	enum lru_list lru;
 	bool some_scanned;
 	int pass;
-
+       struct pglist_data *pgdat = lruvec_pgdat(lruvec);
 	/*
 	 * If the zone or memcg is small, nr[l] can be 0.  This
 	 * results in no scanning on this priority and a potential
@@ -2182,7 +2182,7 @@ static void get_scan_count(struct lruvec *lruvec, int swappiness,
 	if (!global_reclaim(sc))
 		force_scan = true;
 
-	prepare_workingset_protection(pgdat, sc);
+         	prepare_workingset_protection(pgdat, sc);
 
 	/* If we have no swap space, do not bother scanning anon pages. */
 	if (!sc->may_swap || (get_nr_swap_pages() <= 0)) {
@@ -2375,8 +2375,9 @@ out:
 		*lru_pages += size;
 		nr[lru] = scan;
 	}
-}
 
+   }
+}
 /*
  * This is a basic per-zone page freer.  Used by both kswapd and direct reclaim.
  */
