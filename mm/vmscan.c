@@ -2101,7 +2101,6 @@ static void get_scan_count(struct lruvec *lruvec, int swappiness,
 	enum lru_list lru;
 	bool some_scanned;
 	int pass;
-       struct pglist_data *pgdat = lruvec_pgdat(lruvec);
 	/*
 	 * If the zone or memcg is small, nr[l] can be 0.  This
 	 * results in no scanning on this priority and a potential
@@ -2291,9 +2290,8 @@ out:
 			some_scanned |= !!scan;
 		}
 	}
+} 
 
-   }
-}
 /*
  * This is a basic per-zone page freer.  Used by both kswapd and direct reclaim.
  */
