@@ -163,6 +163,11 @@ penalty_scale_mayhalve(u64 delta, struct sched_entity *se, bool half) {
 #define penalty_scale(delta, se) \
         (penalty_scale_mayhalve(delta, se, false))
 
+#define lsub_positive(_ptr, _val) do { \
+     typeof(_ptr) ptr = (_ptr); \
+     *ptr -= min_t(typeof(*ptr), *ptr, _val); \
+} while (0)
+
 static inline u32 binary_smooth(u32 new, u32 old) {
   int increment = new - old;
   return (0 <= increment)?
