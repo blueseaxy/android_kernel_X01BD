@@ -4844,6 +4844,17 @@ static int sched_read_attr(struct sched_attr __user *uattr,
 	return 0;
 }
 
+int available_idle_cpu(int cpu)
+{
+   if (!idle_cpu(cpu))
+        return 0;
+
+   if (vcpu_is_preempted(cpu))
+        return 0;
+
+  return 1;
+}
+
 /**
  * sys_sched_getattr - similar to sched_getparam, but with sched_attr
  * @pid: the pid in question.

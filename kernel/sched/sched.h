@@ -29,6 +29,8 @@ extern atomic_long_t calc_load_tasks;
 
 extern void calc_global_load_tick(struct rq *this_rq);
 
+extern int available_idle_cpu(int cpu);
+
 extern long calc_load_fold_active(struct rq *this_rq);
 
 #ifdef CONFIG_SMP

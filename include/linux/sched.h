@@ -991,6 +991,10 @@ static inline int sched_info_on(void)
 #endif
 }
 
+#ifndef vcpu_is_preempted
+#define vcpu_is_preempted(cpu) false
+#endif
+
 enum cpu_idle_type {
 	CPU_IDLE,
 	CPU_NOT_IDLE,
